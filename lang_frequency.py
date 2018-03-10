@@ -1,5 +1,6 @@
 import sys
 import re
+import collections
 
 
 def load_data(filepath):
@@ -9,12 +10,11 @@ def load_data(filepath):
 
 
 def get_most_frequent_words(text):
-    frequency = {}
-    match_pattern = re.findall(r'(\w+)', text, re.UNICODE)
+    frequency = collections.Counter()
 
+    match_pattern = re.findall(r'(\w+)', text, re.UNICODE)
     for word in match_pattern:
-        count = frequency.get(word, 0)
-        frequency[word] = count + 1
+        frequency[word] += 1
 
     sorted_list_of_values = sorted(frequency.values(), reverse=True)
     sorted_list_of_values = sorted_list_of_values[:10]

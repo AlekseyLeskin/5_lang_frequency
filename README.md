@@ -1,6 +1,31 @@
 # Frequency Analysis of Words
 
-[TODO. There will be project description]
+This program takes the path to a text file and outputs 10 most frequent words. The text in the file can be in any language.
+
+# How to start
+
+Clone the repository.
+
+The script requires the Python interpreter version 3.5 to work.
+
+Running on Linux:
+
+```bash
+
+$ python3 lang_frequency.py file.txt 
+# An example of a response script:
+с
+opensource
+и
+приложения
+стороны
+docker
+приложение
+проект
+инфраструктура
+позволяющая
+
+```
 
 # Project Goals
 

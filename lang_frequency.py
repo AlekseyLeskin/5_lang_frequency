@@ -13,8 +13,8 @@ def load_data(filepath):
 
 def get_most_frequent_words(text):
 
-    for item in text:
-        print(item[0])
+    for word in text:
+        print(word[0])
 
 
 if __name__ == '__main__':

@@ -4,27 +4,17 @@ import collections
 
 
 def load_data(filepath):
-    with open(filepath, 'r') as open_file:
-        text_string = open_file.read().lower()
-    return text_string
+    with open(filepath, 'r') as file_contents:
+        text_string = file_contents.read().lower()
+    all_the_words = re.findall(r'(\w+)', text_string, re.UNICODE)
+    frequency = collections.Counter(all_the_words).most_common()[:10]
+    return frequency
 
 
 def get_most_frequent_words(text):
-    frequency = collections.Counter()
 
-    match_pattern = re.findall(r'(\w+)', text, re.UNICODE)
-    for word in match_pattern:
-        frequency[word] += 1
-
-    sorted_list_of_values = sorted(frequency.values(), reverse=True)
-    sorted_list_of_values = sorted_list_of_values[:10]
-
-    for item in sorted_list_of_values:
-        for key, value in frequency.items():
-            if value == item:
-                print(key)
-                frequency.pop(key)
-                break
+    for item in text:
+        print(item[0])
 
 
 if __name__ == '__main__':

@@ -1,6 +1,6 @@
 # Frequency Analysis of Words
 
-This program takes the path to a text file and outputs 10 most frequent words. The text in the file can be in any language.
+This program takes the path to a text file and outputs 10 most frequent words in descending order of frequency. The text in the file can be in any language.
 
 # How to start
 
@@ -14,6 +14,7 @@ Running on Linux:
 
 $ python3 lang_frequency.py file.txt 
 # An example of a response script:
+Самые частые слова в тексте в порядке убывания частоты:
 с
 opensource
 и

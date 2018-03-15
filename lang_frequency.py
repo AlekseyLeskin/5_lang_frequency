@@ -10,8 +10,9 @@ def load_data(filepath):
 
 
 def get_most_frequent_words(text_string):
+    number_of_words = 10
     list_of_all_the_words = re.findall(r'(\w+)', text_string, re.UNICODE)
-    frequency = collections.Counter(list_of_all_the_words).most_common(10)
+    frequency = collections.Counter(list_of_all_the_words).most_common(number_of_words)
     return frequency
 
 
